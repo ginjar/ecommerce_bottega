@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class AccountInfromation extends Component{
+class AccountInformation extends Component{
     render() {
         return (
             <div>

@@ -3,10 +3,15 @@ import * as actions from '../../actions';
 import { connect } from 'react-redux';
 
 
+import AccountInformation from './accountInformation';
+import PurchaseHistory from './purchaseHistory';
+
+
 class Account extends Component{
     componentDidMount() {
         const navbarLinks = [
-            {_id: 0,
+            {
+                _id: 0,
                 title: 'Purchase History',
                 active: false,
                 component: <PurchaseHistory/>
@@ -27,7 +32,7 @@ class Account extends Component{
         
         let jsx;
         if (this.props.navbarLinks) {
-            this.navbarLinks.forEach(link =>{ 
+            this.props.navbarLinks.forEach(link =>{ 
                 if (link.active) {
                     jsx = link.component;
                 }
