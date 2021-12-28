@@ -13,23 +13,20 @@ import history from "./history";
 
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
-
+import Account from "./components/account/account";
 
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
       <Router history ={history}>
-        <Layout >
-          <p>Child component</p>
-        </Layout>
-        <Switch>
+        <Layout>
+         <Switch>
               <Route path='/' exact component={Signin}/>
               <Route path='/signin' exact component={Signin}/>
               <Route path='/signup' exact component={Signup}/>
-            
+              <Route path ='/account' exact component ={Account}/>
         </Switch>
-
-        
+       </Layout>
       </Router>
     </Provider>,
     document.querySelector(".app-wrapper")
