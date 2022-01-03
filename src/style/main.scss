@@ -22,3 +22,7 @@ body {
 
 @import 'form-fields';
 @import 'details';
+
+@import 'account/account.scss';
+@import 'account/account-information';
+@import 'account/purchase-history.scss';
