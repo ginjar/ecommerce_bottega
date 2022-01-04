@@ -1,18 +1,22 @@
-import React, { Component } from "react";
-import PageTitle from '../pageTitle';
-import Purchases from "./purchases";
-import PurchaseDetail from "./purchasesDetail";
+import React, { Component } from 'react';
 
-class PurchaseHistory extends Component{
+import PageTitle from '../pageTitle';
+import Purchases from './purchases';
+import PurchaseDetail from './purchasesDetail';
+
+class PurchaseHistory extends Component {
     render() {
         return (
-            
-    <div className='purchase-history'>
+            <div className='purchase-history'>
                 <PageTitle className='purchase-history__page-title' title='Purchase History'/>
-                <Purchases className='purchases-history__purchases' />
-                <PurchaseDetail className='purchases-history__detail'/>
+                <div className='purchase-history__content'>
+                    <Purchases className='purchase-history__purchases'/>
+                    <PurchaseDetail className='purchase-history__detail'/>
+                </div>
+                <div className='purchase-history__border-bottom'></div>
             </div>
         )
     }
 }
+
 export default PurchaseHistory;
