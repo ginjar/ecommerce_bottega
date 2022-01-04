@@ -10,9 +10,14 @@ import {
     fetchUserPurchases
 } from './user';
 
+import {
+    setPurchaseDetail
+} from './user';
+
 export {
     setHeaderLinks,
     setNavbarLinks,
     changeNavbarActive, 
-    fetchUserPurchases
+    fetchUserPurchases,
+    setPurchaseDetail
 };
