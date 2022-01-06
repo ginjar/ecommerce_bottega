@@ -6,7 +6,18 @@ import {
 
 const INITIAL_STATE = {
     purchases: [],
-    purchaseDetail: {}
+    purchaseDetail: {
+            __id: -1,
+            total: 0,
+            orderNumber: '',
+            orderDate: null,
+            creditCard: '',
+        user: {
+            name: '',
+            shippingAddress: ''
+        },
+
+    }
 }
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
