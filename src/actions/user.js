@@ -3,13 +3,15 @@ import {
     SET_PURCHASE_DETAIL
 } from './types';
 
-export function setPurchaseDetail(_id){
+export function setPurchaseDetail(_id) {
+    console.log(_id);
     return ({
         type: SET_PURCHASE_DETAIL,
         payload: _id
     })
 }
 export function fetchUserPurchases() {
+    console.log('orderNumber');
         return ({
             type: SET_USER_PURCHASES,
             payload: [{
