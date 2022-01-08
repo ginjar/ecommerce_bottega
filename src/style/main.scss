@@ -22,7 +22,10 @@ body {
 
 @import 'form-fields';
 @import 'details';
+@import 'auth/signin';
+@import 'auth/signup';
 
-@import 'account/account.scss';
+@import 'account/account';
 @import 'account/account-information';
-@import 'account/purchase-history.scss';
+@import 'account/purchase-history';
+@import "shop/shop";
