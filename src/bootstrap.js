@@ -4,13 +4,13 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Router, Switch, Route } from "react-router-dom";
 import reducers from "./reducers";
-import Shop from "./components/shop/shop"
+
 const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 import "./style/main.scss";
 import Layout from "./components/layout";
 import history from "./history";
-
+import Shop from "./components/shop/shop"
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
 import Account from "./components/account/account";
