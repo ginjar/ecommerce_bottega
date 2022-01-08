@@ -6,7 +6,8 @@ import {
 } from './headernavbar';
 
 import {
-    fetchShopCategories
+    fetchShopCategories,
+    fetchShopProducts
 } from './shop';
 
 import {
@@ -24,4 +25,5 @@ export {
     fetchUserPurchases,
     setPurchaseDetail,
     fetchShopCategories,
+    fetchShopProducts
 };
