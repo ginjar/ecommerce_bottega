@@ -13,7 +13,8 @@ class SignIn extends Component {
     }    
 
     onSubmit = (fields) => {
-        this.props.signIn(fields);
+        //this.props.signIn(fields);
+        
         this.props.history.push('/account');
     }
 
