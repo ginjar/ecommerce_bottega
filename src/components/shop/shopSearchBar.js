@@ -11,7 +11,6 @@ function FormSearchBar(props) {
     )
 }
 
-{/* <i class="fas fa-search"></i> */}
 
 class ShopSearchBar extends Component {
     render() {

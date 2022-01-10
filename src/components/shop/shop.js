@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
+
 class Shop extends Component {
 
     componentDidMount() {
@@ -17,49 +18,50 @@ class Shop extends Component {
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
         this.props.fetchShopProducts();
-        
-            // filter products with links
     }
+
     shouldComponentUpdate(nextProps) {
         if(this.props != nextProps) {
             this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
         }
         return true
-
     }
+
     onSubmit = (fields) => {
         this.props.filterProductsWithQuery(fields)
     }
+
     render() {
 
         return (
-             <div className='shop'>
-                       <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
-        <div className='shop__products'>
-            {
-                this.props.filteredProducts.map(product => {
-                    return (
-                        <div className='shop-product'>
-                            <ShopProduct {...product} key = {product.id}/>
-                        </div>
-                    )
-                })
-            }
-        </div>
-        {/* shop cart button */}
-    </div>
-)
+            <div className='shop'>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
+                <div className='shop__products'>
+                    {
+                        this.props.filteredProducts.map(product => {
+                            return (
+                                <ShopProduct {...product} key={product._id} />
+                            )
+                        })
+                    }
+                </div>
+                {/* shop cart button */}
+            </div>
+        )
     }
 }
 
 function mapStateToProps(state) {
-    const { categories,filteredProducts } = state.shop;
+    const { categories, filteredProducts } = state.shop;
     return {
         categories,
         filteredProducts
     } 
 }
 
+
+
 Shop = connect(mapStateToProps, actions)(Shop);
 
-export default Shop; 
+export default Shop;
+
