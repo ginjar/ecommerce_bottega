@@ -1,3 +1,5 @@
+//need to fix searchbar styling and the qty box position
+
 import {
     SET_SHOP_CATEGORIES,
     SET_NAVBAR_LINKS,
