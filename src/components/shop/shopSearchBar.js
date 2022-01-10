@@ -4,7 +4,10 @@ import { reduxForm, Field } from 'redux-form';
 
 function FormSearchBar(props) {
     return (
-        <input className={`${props.className} form-search-bar`} {...props.input} type='text' placeholder={`${props.placeholder}`} />
+        <div className='search-bar-grid'>
+            <i class = 'fas fa-search search-bargrid__icon'></i>
+            <input className={`${props.className} form-search-bar search-bar-grid_input`} {...props.input} type='text' placeholder={`${props.placeholder}`} />
+            </div>
     )
 }
 
