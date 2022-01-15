@@ -5,6 +5,7 @@ import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 import ShopCart from './shopCart';
+import CartButton from './cartButton';
 class Shop extends Component {
     constructor() {
         super()
@@ -37,9 +38,16 @@ class Shop extends Component {
     onSubmit = (fields) => {
         this.props.filterProductsWithQuery(fields)
     }
+    handleAddToCart = () => {
+        if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+            document.getElementById('shop-cart').classList.remove('cart-hidden');
+        } else {
+            document.getElementById('shop-cart').classList.add('cart-hidden');
+        }
+    }
 
     render() {
-        return <ShopCart className='shop__cart'/>
+        //return <ShopCart className='shop__cart' />
         return (
             <div className='shop'>
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
@@ -56,7 +64,7 @@ class Shop extends Component {
                     this.state.showCart ? <ShopCart className='shop__cart'/> : ''
                 }
 
-                {/* shop cart button */}
+                <CartButton onClick={this.handleAddToCart} className = 'shop__cart-button'/>
             </div>
         )
     }
