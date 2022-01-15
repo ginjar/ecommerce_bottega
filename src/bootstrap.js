@@ -14,7 +14,7 @@ import Shop from "./components/shop/shop"
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
 import Account from "./components/account/account";
-import Review from './components/order/review';
+import Review from "./components/order/review";
 
             
 
@@ -29,7 +29,7 @@ function main() {
               <Route path='/signup' exact component={Signup}/>
             <Route path='/account' exact component={Account} />
             <Route path='/shop' exact component={Shop} />
-            <Route path='/order/review' exact component={Review}/>
+            <Route path = '/review' exact component={Review}/>
         </Switch>
        </Layout>
       </Router>

@@ -2,7 +2,7 @@ import {
     SET_USER_PURCHASES,
     SET_PURCHASE_DETAIL,
     SET_CART_PRODUCTS,
-    ADD_CART_PRODUCT
+    ADD_CART_PRODUCTS
 
 } from './types';
 
@@ -15,7 +15,7 @@ export function setPurchaseDetail(_id) {
 }
 export function addCartProduct(product) {
     return ({
-        type: ADD_CART_PRODUCT,
+        type: ADD_CART_PRODUCTS,
         payload: product
     })
 }
