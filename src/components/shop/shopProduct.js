@@ -9,8 +9,8 @@ class ShopProduct extends Component {
     handleAddToCart = () => {
         if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
             document.getElementById('shop-cart').classList.remove('cart-hidden');
-            const { _id, title, description, price, belongsTo } = this.props;
-            this.props.addCartProduct({ _id, title, description, price, belongsTo });
+            const { _id, title, description, price, belongsTo, imageUrl } = this.props;
+            this.props.addCartProduct({ _id, title, description, price, belongsTo, imageUrl });
         
         } else {
             document.getElementById('shop-cart').classList.add('cart-hidden');
@@ -34,7 +34,8 @@ class ShopProduct extends Component {
                     </div>
                     <GreenPriceTag className='shop-product__back__price' title={price}/>
                     <Quantity className='shop-product__back__quantity' quantity={1}/>
-                    <a onClick = {this.handleAddToCart}className='shop-product__back__add-to-cart'>
+                    <a onClick={this.handleAddToCart} className='shop-product__back__add-to-cart'>
+                        Add To Cart
                     </a>
                 </div>
             </div>

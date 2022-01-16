@@ -62,7 +62,7 @@ class Shop extends Component {
                     }
                 </div>
                 {
-                    this.state.showCart ? <ShopCart className='shop__cart'/> : ''
+                    this.state.showCart ? <ShopCart className= 'shop__cart'/> : ''
                 }
 
                 <CartButton onClick={this.handleAddToCart} className = 'shop__cart-button'icon='fas fa-cart-plus'/>

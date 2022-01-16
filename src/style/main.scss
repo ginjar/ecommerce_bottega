@@ -23,9 +23,11 @@ body {
 @import 'auth/signup';
 
 @import 'page-title';
-
+@import "green-price-tag";
 @import 'form-fields';
 @import 'details';
+@import 'quantity';
+
 @import 'auth/signin';
 @import 'auth/signup';
 
@@ -33,9 +35,8 @@ body {
 @import 'account/account-information';
 @import 'account/purchase-history';
 @import "shop/shop";
+
 @import 'shop/shop-search-bar';
-@import 'shop/quantity';
-@import "./shop/green-price-tag";
 @import 'shop/shop-product';
 @import 'shop/shop-cart';
 @import 'shop/cart-product';
