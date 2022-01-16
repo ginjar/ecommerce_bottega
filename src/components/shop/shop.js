@@ -6,6 +6,7 @@ import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 import ShopCart from './shopCart';
 import CartButton from './cartButton';
+
 class Shop extends Component {
     constructor() {
         super()
