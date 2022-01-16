@@ -7,7 +7,7 @@ import {
 const INITIAL_STATE = {
   
     categories: [],
-    productsSelected: [],
+    products: [],
     filteredProducts: []
     
 }

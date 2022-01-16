@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     purchases: [],
     cartProducts: [],
     purchaseDetail: {
-            __id: -1,
+            _id: -1,
             total: 0,
             orderNumber: '',
             orderDate: null,
