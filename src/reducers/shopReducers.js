@@ -27,7 +27,7 @@ export default function (state = INITIAL_STATE, action) {
         case FILTER_PRODUCTS_WITH_CATEGORY_ID:
                 var filteredProducts = [];
                 state.products.map(product => {
-                    if(product.belongsTo.includes(action.payload)) {
+                    if (product.belongsTo.includes(action.payload)) {
                         filteredProducts.push(product);
                     }
                 })
