@@ -7,6 +7,7 @@ import { FormInput, FormButton } from '../formFields';
 
 import history from '../../history';
 import OrderSummary from './orderSummary';
+import  InfoTitle  from './infoHelp';
 
 class ShippingForm extends Component {
     render() {
@@ -38,7 +39,7 @@ class ShippingForm extends Component {
                 placeholder='State'
                 name='state'
                 component={FormInput}/>
-                <Field className='shipping-form__zip'
+                <Field className='shipping-form__zipcode'
                 type='zipcode'
                 title='Zipcode'
                 placeholder='Zipcode'
@@ -59,8 +60,10 @@ class ShippingForm extends Component {
                 title='Back'
                 name='back'
                 short={true}
-                component={FormButton}/>
-                <OrderSummary className='shipping-form__summary'/>
+                    component={FormButton} />
+                {/* <InfoTitle className='order-summary__total info-title-green' title='Total' value='$8.02'/> */}
+
+                <OrderSummary className='shipping-form__order-summary' />
             </form>
         )
     }

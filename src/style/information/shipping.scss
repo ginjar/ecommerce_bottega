@@ -14,7 +14,7 @@
 .shipping-form {
     &__name {
         grid-row: name-s/name-e;
-    }
+         }
     &__address {
         grid-row: address-s/address-e;
     }
@@ -22,10 +22,16 @@
         grid-row: city-s/city-e;
     }
     
-    &__zipcode 
+    &__zipcode, 
     &__state {
         grid-row: state-zip-s/state-zip-e;
         grid-column: back-s;
+        input{
+            width: 200px;
+        }
+    }
+    &__zipcode{
+        transform: translateX(226px);
     }
     &__line {
         grid-row: line-s/line-e;
@@ -42,6 +48,8 @@
         grid-column: use-this-address-s/use-this-address-e;
     }
     &__order-summary  {
-        	
+        grid-row: name-s;
+        grid-column: use-this-address-e/-1;
+        justify-self: end;
         }
 }
