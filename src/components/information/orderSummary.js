@@ -18,7 +18,7 @@ class OrderSummary extends Component {
                 <UnderlinedTitle className='order-summary__title' title='Order Summary'/>
                 <InfoTitle className='order-summary__subtotal' title={`${amtStickers} stickers`} value={`$${subtotal}`}/>
                 <InfoTitle className='order-summary__tax-shipping' title='Taxes & Shipping' value={`$${tax}`}/>
-                <InfoTitle className='order-summary__total info-title-green' title='Total' value={`$${subtotal + tax}`}/>
+                <InfoTitle className='order-summary__total' title='Total' value={`$${subtotal + tax}`}/>
              </div>
         )
     }

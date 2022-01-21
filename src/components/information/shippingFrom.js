@@ -61,7 +61,7 @@ class ShippingForm extends Component {
                 name='back'
                 short={true}
                     component={FormButton} />
-                {/* <InfoTitle className='order-summary__total info-title-green' title='Total' value='$8.02'/> */}
+             
 
                 <OrderSummary className='shipping-form__order-summary' />
             </form>
